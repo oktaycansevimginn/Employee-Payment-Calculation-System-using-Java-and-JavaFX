@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<GridPane fx:controller="application.SampleController"
+          xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 20;">
+    <Label text="SSN:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="tfSSN" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="tfFirstName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="tfLastName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Employee Type:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <ComboBox fx:id="cbEmployeeType" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Salaried" />
+                <String fx:value="Hourly" />
+                <String fx:value="Commission" />
+                <String fx:value="Base Plus Commission" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Button text="Add Employee" fx:id="btnAdd" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <Button text="Search by SSN" fx:id="btnSearch" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button text="Update by SSN" fx:id="btnUpdate" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <Button text="Clear Fields" fx:id="btnClear" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+</GridPane>
